@@ -1,0 +1,53 @@
+
+============================================================================
+
+NUMELE PROIECTULUI : Rat Commutes
+TEMA PROIECTULUI : Serviciu de ghidare in mediu urban prin intermediul
+				   liniilor de transport in comun supraterane
+AUTOR : Țeculescu Octavian-Alexandru
+		(UPB ACS 325CD)
+		
+============================================================================
+
+SCURTA INTRODUCERE :
+	Aplicatia utilizeaza date despre deplasarea vehiculelor unei retele de
+transport in comun pentru a determina drumul optim al utilizatorului intre
+doua puncte relevante (statii).
+
+IMPLEMENTARE :
+	Abordarea problemei este facuta pe baza teoriei grafurilor si algoritmului
+Dijkstra pentru drumul optim intre 2 noduri de pe un graf orientat.
+	Datele despre deplasarea vehiculelor sunt extrase din fisierele folderului
+zonei in care utilizatorul doreste sa se deplaseze (in cazul absentei mai
+multor zone decat cea standard, aplicatia o va selecta automat pe aceasta).
+	Statiile se vor extrage initial din fisierul nodes.txt si se vor salva
+intr-un graf auxiliar pentru a putea fi obtinute date despre acestea precum
+numele si id-ul. Codul unei statii este un detaliu de implementare ce priveste
+unicitatea fiecarui nod in graf.
+	Detaliile despre circulatia vehiculelor pe rutele fiecarei linii se vor
+in fisierul routes.txt si includ rutele individuale, cat si orele plecarii
+fiecarui vehicul pe ruta liniei.
+
+ATENTIE :
+	Aplicatia nu este implementata astfel incat ruta unei linii sa includa
+statii duplicate.
+	In cazul imposibilitatii prinderi unui ultim vehicul pe o linie, rezultatele
+pot fi incorecte.
+
+============================================================================
+
+MOD DE UTILIZARE :
+	1) Asteptati ca aplicatia sa afiseze zonele disponibile, in cazul afisierii
+unei singure zone, sariti la pasul 3.
+	2) Introduceti de la tastatura numarul zonei pe care doriti sa va deplasati.
+	3) Introduceti numele statiei la care (sau in apropierea careia) va aflati
+(formatul din fisier este reprezentat ca un cuvant in care se afla underline in
+loc de fiecare spatiu pentru tratarea fiecarui nume de statie ca un cuvant,
+la introducerea destinatiei si a locatiei curente folositi spatii in loc de 
+underline)
+	4) Introduceti in acelasi mod numele statiei la care doriti sa ajungeti.
+	5) Introduceti *doar* ora curenta.
+	6) Introduceti minutul curent.
+	
+============================================================================
+
